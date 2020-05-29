@@ -18,4 +18,10 @@ public class TestAddressBookPage {
 
     @FindBy (name = "commit")
     public WebElement signInButton;
+
+    @FindBy (xpath = "//h1")
+    public WebElement welcomeMessage;
+
+    @FindBy (className = "navbar-text")
+    public WebElement mailID;
 }
