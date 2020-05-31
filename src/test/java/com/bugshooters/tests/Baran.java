@@ -8,5 +8,6 @@ public class Baran {
     public void testCase1() {
 
         System.out.println("Baran");
+        System.out.println("zafer");
     }
 }
