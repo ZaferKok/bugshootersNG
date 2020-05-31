@@ -12,5 +12,6 @@ public class Baran {
         System.out.println("zaf2");
         System.out.println("123");
         System.out.println("zaf bar");
+        System.out.println("merhaba");
     }
 }
