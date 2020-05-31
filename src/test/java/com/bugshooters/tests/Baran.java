@@ -10,5 +10,6 @@ public class Baran {
         System.out.println("Baran");
         System.out.println("zafer");
         System.out.println("zaf2");
+        System.out.println("123");
     }
 }
