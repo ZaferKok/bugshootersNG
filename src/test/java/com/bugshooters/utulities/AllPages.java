@@ -2,6 +2,7 @@ package com.bugshooters.utulities;
 
 import com.bugshooters.pages.AmazonHomePage;
 import com.bugshooters.pages.TestAddressBookPage;
+import com.bugshooters.pages.WindowHandlePage;
 
 public class AllPages {
 
@@ -11,6 +12,7 @@ public class AllPages {
 
     private AmazonHomePage amazonHomePage;
     private TestAddressBookPage testAddressBookPage;
+    private WindowHandlePage windowHandlePage;
 
     public AmazonHomePage amazonHomePage(){
         if (amazonHomePage == null){
@@ -24,5 +26,10 @@ public class AllPages {
         }
         return testAddressBookPage;
     }
-
+    public WindowHandlePage windowHandlePage(){
+        if (windowHandlePage == null){
+            windowHandlePage = new WindowHandlePage();
+        }
+        return windowHandlePage;
+    }
 }
