@@ -25,7 +25,7 @@ an option. Print false otherwise.
     public void amazonDrop () {
 
 // 1. Print the first selected option and assert if it equals "All Departments"
-        CrossDriver.getDriver().get("https://www.amazon.ca/");
+        driver.get("https://www.amazon.ca/");
         // AmazonHomePage amazonHomePage = new AmazonHomePage();
         AllPages allPages = new AllPages();
         Select select = new Select(allPages.amazonHomePage().drop);

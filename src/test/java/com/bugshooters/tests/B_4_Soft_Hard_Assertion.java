@@ -20,7 +20,7 @@ public class B_4_Soft_Hard_Assertion extends TestBase {
 
     @Test
     public void login(){
-        CrossDriver.getDriver().get("http://a.testaddressbook.com/sign_in");
+        driver.get("http://a.testaddressbook.com/sign_in");
 
         allPages.testAddressBookPage().emailBox.sendKeys("testtechproed@gmail.com");
         allPages.testAddressBookPage().passwordBox.sendKeys("Test1234!");
@@ -30,7 +30,9 @@ public class B_4_Soft_Hard_Assertion extends TestBase {
     public void softAssertion (){
 
         // HARD ASSERTION
-        Assert.assertEquals(allPages.testAddressBookPage().welcomeMessage.getText(), "Welcome to Address Book");
+        String actual = allPages.testAddressBookPage().welcomeMessage.getText();
+        String expected = "Welcome to Address Book";
+        Assert.assertEquals(actual, expected);
 
         // SOFT ASSERTION
         SoftAssert softAssert = new SoftAssert();
