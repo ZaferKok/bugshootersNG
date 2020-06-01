@@ -10,5 +10,7 @@ public class B_5_HandleAlerts {
         System.out.println("git deneme");
         System.out.println("git deneme2");
 
+        System.out.println("hello");
+
     }
 }

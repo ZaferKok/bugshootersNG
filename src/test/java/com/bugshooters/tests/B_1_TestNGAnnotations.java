@@ -2,7 +2,8 @@ package com.bugshooters.tests;
 
 import org.testng.annotations.*;
 
-public class B_1_TestNGAnnotations {
+public class
+B_1_TestNGAnnotations {
     //create a method name:setUp() and use@BeforeMethod annotation
     @BeforeMethod
     public void beforeMethod() {
