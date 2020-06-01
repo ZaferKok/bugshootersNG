@@ -2,12 +2,15 @@ package com.bugshooters.tests;
 
 import com.bugshooters.utulities.AllPages;
 import com.bugshooters.utulities.TestBase;
+import com.google.gson.internal.bind.util.ISO8601Utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class B_5_HandleAlerts extends TestBase {
+
+
     /*
 Create 3 methods
 1. acceptAlert
@@ -24,7 +27,7 @@ Go to https://the-internet.herokuapp.com/javascript_alerts
         allPages.handleAlertsPage().clickbutton1.click();
         driver.switchTo().alert().accept();
         Assert.assertTrue(allPages.handleAlertsPage().resultmessage.isDisplayed());
-
+        System.out.println("Ali");
     }
     @Test
     public void testCase2() {
