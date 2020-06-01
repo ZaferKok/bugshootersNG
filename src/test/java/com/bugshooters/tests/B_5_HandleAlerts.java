@@ -8,5 +8,7 @@ public class B_5_HandleAlerts {
     public void testCase1() {
 
         System.out.println("git deneme");
+        System.out.println("git deneme2");
+
     }
 }
