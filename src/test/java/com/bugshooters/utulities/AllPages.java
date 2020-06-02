@@ -18,12 +18,10 @@ public class AllPages {
 
     public HandleAlertsPage handleAlertsPage(){
         if(handleAlertsPage==null){
-            handleAlertsPage= new HandleAlertsPage();
-
+           handleAlertsPage= new HandleAlertsPage();
         }
         return handleAlertsPage;
     }
-
     public AmazonHomePage amazonHomePage(){
         if (amazonHomePage == null){
             amazonHomePage = new AmazonHomePage();
