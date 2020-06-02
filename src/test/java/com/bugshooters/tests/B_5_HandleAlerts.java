@@ -39,5 +39,6 @@ public class B_5_HandleAlerts extends TestBase {
         driver.switchTo().alert().accept();
         String expectedResultMessagelast="You entered: Ahmet";
         Assert.assertEquals(allPages.handleAlertsPage().resultmessage3.getText(),expectedResultMessagelast);
+
     }
 }
