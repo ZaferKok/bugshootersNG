@@ -27,22 +27,20 @@ Go to https://the-internet.herokuapp.com/javascript_alerts
 
     }
     @Test
-    public void testCase2() {
+    public void testCase2(){
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         allPages.handleAlertsPage().clickButton2.click();
         driver.switchTo().alert().dismiss();
         String expectedResultMessage="You clicked: Cancel";
-        Assert.assertEquals(allPages.handleAlertsPage().resultmessage2,expectedResultMessage);
+        Assert.assertEquals(allPages.handleAlertsPage().resultmessage2.getText(),expectedResultMessage);
 
     }
     @Test
-    public void testCase3() throws InterruptedException {
+    public void testCase3() {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         allPages.handleAlertsPage().clickButton3.click();
         driver.switchTo().alert().sendKeys("Ahmet");
-        Thread.sleep(5000);
         driver.switchTo().alert().accept();
-
         String expectedResultMessagelast="You entered: Ahmet";
         Assert.assertEquals(allPages.handleAlertsPage().resultmessage3.getText(),expectedResultMessagelast);
 
