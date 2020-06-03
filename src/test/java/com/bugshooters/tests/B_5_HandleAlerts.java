@@ -32,7 +32,7 @@ public class B_5_HandleAlerts extends TestBase {
         Assert.assertEquals(allPages.handleAlertsPage().resultmessage2.getText(),expectedResultMessage);
     }
     @Test
-    public void testCase3() throws InterruptedException {
+    public void testCase3() {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         allPages.handleAlertsPage().clickButton3.click();
         driver.switchTo().alert().sendKeys("Ahmet");

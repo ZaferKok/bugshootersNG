@@ -1,9 +1,6 @@
 package com.bugshooters.utulities;
 
-import com.bugshooters.pages.AmazonHomePage;
-import com.bugshooters.pages.HandleAlertsPage;
-import com.bugshooters.pages.TestAddressBookPage;
-import com.bugshooters.pages.WindowHandlePage;
+import com.bugshooters.pages.*;
 
 public class AllPages {
 
@@ -15,6 +12,14 @@ public class AllPages {
     private TestAddressBookPage testAddressBookPage;
     private WindowHandlePage windowHandlePage;
     private HandleAlertsPage handleAlertsPage;
+    private HandleIframePage handleIframePage;
+
+    public HandleIframePage handleIframePage(){
+        if (handleIframePage == null){
+            handleIframePage = new HandleIframePage();
+        }
+        return handleIframePage;
+    }
 
     public HandleAlertsPage handleAlertsPage(){
         if(handleAlertsPage==null){
