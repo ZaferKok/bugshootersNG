@@ -1,4 +1,4 @@
-package com.bugshooters.utulities;
+package com.bugshooters.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

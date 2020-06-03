@@ -1,8 +1,7 @@
 package com.bugshooters.tests;
 
-import com.bugshooters.utulities.AllPages;
-import com.bugshooters.utulities.CrossDriver;
-import com.bugshooters.utulities.TestBase;
+import com.bugshooters.utilities.AllPages;
+import com.bugshooters.utilities.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;

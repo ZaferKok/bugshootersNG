@@ -1,4 +1,4 @@
-package com.bugshooters.utulities;
+package com.bugshooters.utilities;
 
 import com.bugshooters.pages.*;
 

@@ -7,8 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="bugshootersNG.git" />
-        <module name="bugshootersNGNew" />
         <module name="bugshootersNG" />
+        <module name="bugshootersNGNew" />
+        <module name="bugshootersNGGroup" />
       </profile>
     </annotationProcessing>
   </component>
