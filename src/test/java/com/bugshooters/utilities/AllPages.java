@@ -13,6 +13,21 @@ public class AllPages {
     private WindowHandlePage windowHandlePage;
     private HandleAlertsPage handleAlertsPage;
     private HandleIframePage handleIframePage;
+    private ActionsPage actionsPage;
+    private GooglePage googlePage;
+
+    public GooglePage googlePage() {
+        if (googlePage == null) {
+            googlePage = new GooglePage();
+        }return googlePage;
+    }
+
+    public ActionsPage actionsPage (){
+        if (actionsPage == null){
+            actionsPage = new ActionsPage();
+        }
+        return actionsPage;
+    }
 
     public HandleIframePage handleIframePage(){
         if (handleIframePage == null){
