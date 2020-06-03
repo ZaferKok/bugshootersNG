@@ -11,7 +11,9 @@ import java.util.ArrayList;
 import java.util.Set;
 
 public class B_8_HandleWindows extends TestBase {
+
     AllPages allPages = new AllPages();
+
     @Test
     public void windowHandle() {
         driver.get("https://the-internet.herokuapp.com/windows");
