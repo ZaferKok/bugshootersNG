@@ -1,6 +1,6 @@
 package com.bugshooters.pages;
 
-import com.bugshooters.utulities.CrossDriver;
+import com.bugshooters.utilities.CrossDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

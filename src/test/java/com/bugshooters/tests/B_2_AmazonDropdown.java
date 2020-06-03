@@ -1,9 +1,7 @@
 package com.bugshooters.tests;
 
-import com.bugshooters.pages.AmazonHomePage;
-import com.bugshooters.utulities.AllPages;
-import com.bugshooters.utulities.CrossDriver;
-import com.bugshooters.utulities.TestBase;
+import com.bugshooters.utilities.AllPages;
+import com.bugshooters.utilities.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;

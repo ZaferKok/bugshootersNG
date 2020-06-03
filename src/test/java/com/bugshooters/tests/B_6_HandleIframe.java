@@ -1,16 +1,9 @@
 package com.bugshooters.tests;
 
-import com.bugshooters.utulities.AllPages;
-import com.bugshooters.utulities.TestBase;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.bugshooters.utilities.AllPages;
+import com.bugshooters.utilities.TestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 public class B_6_HandleIframe extends TestBase {
     AllPages allPages = new AllPages();

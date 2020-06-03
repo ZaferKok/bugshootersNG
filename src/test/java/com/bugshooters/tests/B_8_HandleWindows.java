@@ -1,13 +1,11 @@
 package com.bugshooters.tests;
 
-import com.bugshooters.utulities.AllPages;
-import com.bugshooters.utulities.CrossDriver;
-import com.bugshooters.utulities.TestBase;
+import com.bugshooters.utilities.AllPages;
+import com.bugshooters.utilities.TestBase;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 import java.util.Set;
 
 public class B_8_HandleWindows extends TestBase {
