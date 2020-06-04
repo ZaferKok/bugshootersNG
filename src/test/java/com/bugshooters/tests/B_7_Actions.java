@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import sun.awt.windows.ThemeReader;
 
 public class B_7_Actions extends TestBase {
 //    Create a class: ActionsClassExample
@@ -62,10 +63,10 @@ public class B_7_Actions extends TestBase {
 //    Search for IPHONE X PRICES (all capital)
 //    And double click on the text box
     @Test
-    public void keysUpDown(){
+    public void keysUpDown() throws InterruptedException {
         driver.get("https://www.google.com/");
 //  METHOD 1 TO SEND UPPER CASE:
-        allPages.googlePage().searchBox.sendKeys(Keys.SHIFT+"iphone x prices", Keys.ENTER);
+//        allPages.googlePage().searchBox.sendKeys(Keys.SHIFT+"iphone x prices" + Keys.ENTER);
 
 //  METHOD 2 : ACTIONS CLASS :using Keys.Shift we are pressing shift key on the keyboard
 //        actions.
@@ -74,14 +75,22 @@ public class B_7_Actions extends TestBase {
 //                keyDown(Keys.SHIFT).
 //                sendKeys("iphone x prices").
 //                perform();
-//  METHOD 2 : using the actions object
-//        actions.
-//                keyDown(searchBox, Keys.SHIFT).
-//                sendKeys("iphone x prices").
-//                keyUp(searchBox,Keys.SHIFT).
-//                perform();
+//      allPages.googlePage().searchBox.submit();
 
-//        actions.doubleClick(allPages.googlePage().searchBox).perform();
+//  METHOD 3 : using the actions object
+//        actions.
+//                keyDown(allPages.googlePage().searchBox, Keys.SHIFT).
+//                sendKeys("iphone x prices").
+//                keyUp(allPages.googlePage().searchBox,Keys.SHIFT).
+//                perform();
+//        allPages.googlePage().searchBox.submit();
+        allPages.googlePage().searchBox.sendKeys("Ali Said BAS");
+        actions.doubleClick(allPages.googlePage().searchBox).perform();
+        Thread.sleep(2000);
+        allPages.googlePage().searchBox.sendKeys(Keys.CONTROL + "x");
+        Thread.sleep(2000);
+        allPages.googlePage().searchBox.sendKeys(Keys.CONTROL + "v" + Keys.ENTER);
+
     }
 
     @Test
@@ -103,5 +112,12 @@ public class B_7_Actions extends TestBase {
         Thread.sleep(1000);
         //Scroll Down to end of the page
         actions.sendKeys(Keys.END).perform();
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.UP).perform();
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.END).perform();
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.HOME).perform();
+
     }
 }
