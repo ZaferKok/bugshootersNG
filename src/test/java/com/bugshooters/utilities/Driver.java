@@ -8,9 +8,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-public class CrossDriver {
+public class Driver {
 
-    private CrossDriver(){
+    private Driver(){
     }
 
     private static WebDriver driver;

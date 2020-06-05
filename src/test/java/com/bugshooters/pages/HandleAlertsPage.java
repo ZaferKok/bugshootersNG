@@ -1,6 +1,6 @@
 package com.bugshooters.pages;
 
-import com.bugshooters.utilities.CrossDriver;
+import com.bugshooters.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,7 +9,7 @@ public class HandleAlertsPage {
 
 
    public HandleAlertsPage(){
-       PageFactory.initElements(CrossDriver.getDriver(), this);}
+       PageFactory.initElements(Driver.getDriver(), this);}
         @FindBy (xpath = "//button[@onclick='jsAlert()']")
         public WebElement clickbutton1;
         @FindBy (xpath = "//p[@id='result']")

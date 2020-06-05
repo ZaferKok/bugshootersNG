@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class B_5_HandleAlerts extends TestBase {
 
     /* Create 3 methods
-        1. acceptAlert    2. dismissAlert    3. sendKeysAlert
+        1. acceptAlert    2. dismissAlert    3. sendKeysAlert   4.getText()
     Go to https://the-internet.herokuapp.com/javascript_alerts */
 
     AllPages allPages = new AllPages();
