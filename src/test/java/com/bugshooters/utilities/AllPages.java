@@ -19,6 +19,20 @@ public class AllPages {
     private FileDownloadPage fileDownloadPage;
     private WaitPage waitPage;
     private EnablePage enablePage;
+    private DragAndDropPage dragAndDropPage;
+    private FHC_HotelRoomCreationPage fhc_hotelRoomCreationPage;
+
+    public FHC_HotelRoomCreationPage fhc_hotelRoomCreationPage(){
+        if(fhc_hotelRoomCreationPage == null){
+            fhc_hotelRoomCreationPage = new FHC_HotelRoomCreationPage();
+        }return fhc_hotelRoomCreationPage;
+    }
+
+    public DragAndDropPage dragAndDropPage(){
+        if(dragAndDropPage == null){
+            dragAndDropPage = new DragAndDropPage();
+        }return dragAndDropPage;
+    }
 
     public EnablePage enablePage(){
         if(enablePage==null){
@@ -88,4 +102,5 @@ public class AllPages {
         }
         return windowHandlePage;
     }
+
 }

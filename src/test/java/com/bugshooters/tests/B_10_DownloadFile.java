@@ -23,8 +23,10 @@ public class B_10_DownloadFile extends TestBase {
     public void isFileExistTest (){
         String mainFolder = System.getProperty("user.dir"); // Example Path
         System.out.println("Proje klasoru : " + mainFolder);
+
         String userFolder = System.getProperty("user.home");
         System.out.println("Ne ise yariyor : " + userFolder);
+
         String downloadPath = userFolder+"/Downloads/Vladimir Boiko -1.jpg";
         boolean isFileExist = Files.exists(Paths.get(downloadPath));
         Assert.assertTrue(isFileExist);
