@@ -16,12 +16,14 @@ public class B_13_DragAndDrop extends TestBase {
 
     AllPages allPages = new AllPages();
 
+
     @Test
     public void dragAndDrop() throws InterruptedException {
         driver.get("http://www.fhctrip.com/Account/LogOn?ReturnUrl=%2Fadmin%2FHotelRoomAdmin");//http://www.fhctrip.com/admin/HotelRoomAdmin
         allPages.fhc_hotelRoomCreationPage().login();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[contains(text(),'List Of Hotelrooms')])[3]")));
+        Thread.sleep(10000);
         allPages.fhc_hotelRoomCreationPage().addHotelRooms.click();
         Assert.assertTrue(allPages.fhc_hotelRoomCreationPage().createHotelRoomText.isDisplayed());
 
@@ -41,7 +43,8 @@ public class B_13_DragAndDrop extends TestBase {
         Thread.sleep(2000);
 
         Actions actions = new Actions(driver);
-        actions.dragAndDrop(allPages.fhc_hotelRoomCreationPage().source, allPages.fhc_hotelRoomCreationPage().target).perform();
+        //actions.dragAndDrop(allPages.fhc_hotelRoomCreationPage().source, allPages.fhc_hotelRoomCreationPage().target).perform();
+        actions.clickAndHold(allPages.fhc_hotelRoomCreationPage().source).moveToElement(allPages.fhc_hotelRoomCreationPage().target).release().build().perform();
 
         Select select1= new Select(allPages.fhc_hotelRoomCreationPage().roomType);
         select1.selectByIndex(6);

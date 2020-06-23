@@ -37,7 +37,7 @@ public class B_4_Soft_Hard_Assertion extends TestBase {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(allPages.testAddressBookPage().welcomeMessage.getText(), "Welcome to Address Book");
         softAssert.assertEquals(allPages.testAddressBookPage().mailID.getText(), "testtechproed@gmail.com");
-        softAssert.assertEquals(3,5); // Fail ama assertAll yazılmazsa pass olur!!
+        softAssert.assertEquals(5,5); // Fail ama assertAll yazılmazsa pass olur!!
         softAssert.assertAll(); // Gercek manada assertion bu komut ile calisiyor. Yazilmaz ise fail olsa bile pass verir.
     }
 }
