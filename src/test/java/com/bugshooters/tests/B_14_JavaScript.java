@@ -53,5 +53,7 @@ public class B_14_JavaScript extends TestBase {
 //            Thread.sleep(5000);
             System.out.println("Abuzer");
 
+            System.out.println("cihan");
+
     }
 }

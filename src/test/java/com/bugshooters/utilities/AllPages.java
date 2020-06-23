@@ -102,4 +102,5 @@ public class AllPages {
         }
         return windowHandlePage;
     }
+
 }
