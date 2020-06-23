@@ -2,10 +2,16 @@ package com.bugshooters.tests;
 
 import com.bugshooters.utilities.AllPages;
 import com.bugshooters.utilities.TestBase;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.List;
 
 public class B_2_AmazonDropdown extends TestBase{
@@ -19,13 +25,16 @@ Print the number of elements in the dropdown and assert it as 37.
 BONUS : Check if Appliances is a drop down option. Print true if "Appliances" is
 an option. Print false otherwise.
  */
+AllPages allPages = new AllPages();
     @Test
     public void amazonDrop () {
 
 // 1. Print the first selected option and assert if it equals "All Departments"
         driver.get("https://www.amazon.ca/");
         // AmazonHomePage amazonHomePage = new AmazonHomePage();
-        AllPages allPages = new AllPages();
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("startmaximized");
+
         Select select = new Select(allPages.amazonHomePage().drop);
         Assert.assertEquals(select.getFirstSelectedOption().getText(), "All Departments");
 
@@ -63,7 +72,6 @@ an option. Print false otherwise.
 
 
 
-
 // LAMBDA ILE: Bunlar benim kendi denemelerim. Mehmet abi LAMBDA icin tekrar paylasacak.
 // 1. Asagidaki kod sonucu "Optional[All Departments]" olarak veriyor, assert yapamadım.
         System.out.println(allOptions.stream().map(t->t.getText()).findFirst());
@@ -81,6 +89,14 @@ an option. Print false otherwise.
 
 // 6.
         Assert.assertTrue(allOptions.stream().map(t->t.getText()).anyMatch(t->t.equals("Video Games")));
+    }
+    @Test
+    public void click() throws FileNotFoundException {
+        driver.get("https://www.amazon.ca/");
+        System.out.println(allPages.amazonHomePage().drop.getText());
+        allPages.amazonHomePage().drop.click();
+        driver.findElement(By.xpath("//option[@value='search-alias=beauty']")).click();
+        System.out.println(allPages.amazonHomePage().drop.getSize());
     }
 }
 //    public void dropDownTest(){
