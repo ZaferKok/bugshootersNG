@@ -58,10 +58,9 @@ public class FHC_HotelRoomCreationPage {
     @FindBy(id = "lkpHotels")
     public WebElement IDHotelList;
 
-    public void login() throws InterruptedException {
+    public void login() {
         allPages.fhc_hotelRoomCreationPage().username.sendKeys(ConfigReader.getProperty("valid_username"));
         allPages.fhc_hotelRoomCreationPage().password.sendKeys(ConfigReader.getProperty("valid_password"));
         allPages.fhc_hotelRoomCreationPage().loginBtn.click();
-        Thread.sleep(3000);
     }
 }

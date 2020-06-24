@@ -51,9 +51,7 @@ public class B_14_JavaScript extends TestBase {
 //            WebElement element = driver.findElement(By.xpath("//option[@value=\"search-alias=instant-video\"]"));
 //            element.click();
 //            Thread.sleep(5000);
-            System.out.println("Abuzer");
 
-            System.out.println("cihan");
 
     }
 }

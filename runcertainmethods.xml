@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite 3">
+    <test name="Test 3">
+        <classes>
+            <class name="com.bugshooters.tests.B_4_Soft_Hard_Assertion">
+                <methods>
+                    <!--Command + / => I want to run only invalidID test-->
+                    <!--                    exclude means run all but this method-->
+                    <!--                    include means run ONLY that specific method-->
+                    <include name="softAssertion"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test Suite 4">
+        <classes>
+            <class name="com.bugshooters.tests.B_5_HandleAlerts">
+                <methods>
+                    <!--Command + / => I want to run only invalidID test-->
+                    <!--                    exclude means run all but this method-->
+                    <!--                    include means run ONLY that specific method-->
+                    <exclude name="testCase2"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
