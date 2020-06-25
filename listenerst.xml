@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="listen" verbose="2" parallel="methods" thread-count="2">
+    <listeners>
+        <listener class-name="com.bugshooters.tests.Listen"/>
+    </listeners>
+    <test name="listen test">
+    <classes>
+        <class name="com.bugshooters.tests.B_11_WaitTest"/>
+    </classes>
+    </test>
+
+
+</suite>

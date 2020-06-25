@@ -2,8 +2,10 @@ package com.bugshooters.tests;
 
 import com.bugshooters.utilities.AllPages;
 import com.bugshooters.utilities.TestBase;
+import org.apache.poi.ss.formula.functions.T;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
@@ -12,7 +14,10 @@ import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class B_2_AmazonDropdown extends TestBase{
 /*Go to https://www.amazon.ca/
@@ -88,8 +93,12 @@ AllPages allPages = new AllPages();
         Assert.assertEquals(allOptions.stream().count(), 37);
 
 // 6.
+        Set<WebElement> set = new HashSet<>();
         Assert.assertTrue(allOptions.stream().map(t->t.getText()).anyMatch(t->t.equals("Video Games")));
+        allOptions.stream().allMatch(t->set.add(t));
+        //throw new NoSuchElementException("no such element");
     }
+
     @Test
     public void click() throws FileNotFoundException {
         driver.get("https://www.amazon.ca/");
