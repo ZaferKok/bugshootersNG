@@ -20,7 +20,7 @@ public class B_5_HandleAlerts extends TestBase {
         driver.switchTo().alert().accept();
         Assert.assertTrue(allPages.handleAlertsPage().resultmessage.isDisplayed());
     }
-    @Test
+    @Test(groups="regression1")
     public void testCase2() {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         allPages.handleAlertsPage().clickButton2.click();
@@ -28,7 +28,7 @@ public class B_5_HandleAlerts extends TestBase {
         String expectedResultMessage="You clicked: Cancel";
         Assert.assertEquals(allPages.handleAlertsPage().resultmessage2.getText(),expectedResultMessage);
     }
-    @Test
+    @Test(groups="regression1")
     public void testCase3() {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         allPages.handleAlertsPage().clickButton3.click();
