@@ -11,6 +11,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import sun.awt.windows.ThemeReader;
 
+import java.lang.management.GarbageCollectorMXBean;
+
 public class B_7_Actions extends TestBase {
 //    Create a class: ActionsClassExample
 //    Create a test method : contextClickMethod() and test the following scenario:
@@ -38,7 +40,7 @@ public class B_7_Actions extends TestBase {
         Given user is on the https://www.amazon.com/
         When use click on “Your Account” link
         Then verify the page title contains “Your Account” */
-
+        System.gc();
         driver.get("https://www.amazon.ca/");
         // no need for ==> Actions actions = new Actions(driver); Because it is created in TestBase Class
         actions.moveToElement(allPages.amazonHomePage().signInBox).perform();
