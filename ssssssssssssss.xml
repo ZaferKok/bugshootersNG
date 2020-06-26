@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test-1" parallel="methods" thread-count="3">
+    <test name="bugshooter">
+        <classes>
+            <class name="com.bugshooters.tests.B_5_HandleAlerts"/>
+            <class name="com.bugshooters.tests.B_4_Soft_Hard_Assertion"/>
+        </classes>
+    </test>
+</suite>
