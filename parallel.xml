@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test-1" parallel="tests" thread-count="3">
+    <test name="bugshooter">
+        <classes>
+            <class name="com.bugshooters.tests.B_5_HandleAlerts"/>
+        </classes>
+    </test>
+    <test name="test1">
+        <classes>
+            <class name="com.bugshooters.tests.B_2_AmazonDropdown"/>
+        </classes>
+    </test>
+</suite>

@@ -86,6 +86,7 @@ public class B_7_Actions extends TestBase {
 //                keyUp(allPages.googlePage().searchBox,Keys.SHIFT).
 //                perform();
 //        allPages.googlePage().searchBox.submit();
+
         allPages.googlePage().searchBox.sendKeys("Ali Said BAS");
         actions.doubleClick(allPages.googlePage().searchBox).perform();
         Thread.sleep(2000);

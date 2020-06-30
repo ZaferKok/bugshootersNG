@@ -17,6 +17,7 @@ public class B_12_EnableTest extends TestBase {
     public void isEnabledTest(){
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
+        System.out.println(allPages.enablePage().enableDisableButton.getLocation());
         allPages.enablePage().enableDisableButton.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("message")));
         boolean isEnabled = allPages.enablePage().textBox.isEnabled();

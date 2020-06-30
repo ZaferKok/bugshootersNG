@@ -1,5 +1,7 @@
 package com.bugshooters.utilities;
 
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
@@ -20,13 +22,16 @@ public class TestBase {
     @Parameters ("browser")
     @BeforeMethod (alwaysRun = true)
     public void setup (@Optional String browser){
+        //Dimension d = new Dimension(1024, 768);
         driver = Driver.getDriver(browser);
+        //driver.manage().window().setSize(d);
         driver.manage().window().maximize();
 //        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("startmaximized");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
         actions = new Actions(driver);
+
 
     }
 
